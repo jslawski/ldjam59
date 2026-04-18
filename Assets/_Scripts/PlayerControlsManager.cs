@@ -47,7 +47,7 @@ public class PlayerControlsManager : MonoBehaviour
 
         Vector2 mouseDelta = context.ReadValue<Vector2>();
         
-        this.lookDelta = new Vector3(mouseDelta.y, -mouseDelta.x, 0.0f);
+        this.lookDelta = new Vector3(-mouseDelta.y, mouseDelta.x, 0.0f);
         this.lookDelta *= PlayerControlsManager.mouseSensitivity;
     }
 

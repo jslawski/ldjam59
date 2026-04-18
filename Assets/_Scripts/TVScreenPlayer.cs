@@ -18,7 +18,7 @@ public class TVScreenPlayer : MonoBehaviour
 
     private void Start()
     {
-        this.PlayVideo("TestFootage.mp4");
+        this.PlayVideo("TestFootage.webm");
     }
 
     public void PlayVideo(string videoFileName)
