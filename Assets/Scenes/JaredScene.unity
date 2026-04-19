@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 330585545}
-  _interactableObjectLayer:
+  interactableObjectLayer:
     serializedVersion: 2
     m_Bits: 8
   lookDelta: {x: 0, y: 0, z: 0}

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -82,6 +79,7 @@ public class PlayerControlsManager : MonoBehaviour
             if (potentialComponent != null)
             {
                 this.targetObject = potentialComponent;
+                this.targetObject.interactContactPoint = hitInfo.point;
             }
             else
             {
