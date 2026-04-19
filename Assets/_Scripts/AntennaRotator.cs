@@ -47,11 +47,6 @@ public class AntennaRotator : InteractableObject
         //Quaternion zAxisRotation = Quaternion.Euler(0.0f, 0.0f, this.GetClampedXAngle());
         //Quaternion xAxisRotation = Quaternion.Euler(this.GetClampedZAngle(), 0.0f, 0.0f);
 
-        Debug.LogError("Camera Forward: " + PlayerControlsManager.instance.playerCamera.transform.forward);
-
-        Vector3 zAxis = PlayerControlsManager.instance.playerCamera.transform.forward;//new Vector3(PlayerControlsManager.instance.playerCamera.transform.forward.x, 0.0f, PlayerControlsManager.instance.playerCamera.transform.forward.z);
-
-
         Quaternion zAxisRotation = Quaternion.AngleAxis(this.GetClampedXAngle(), this._antennaBaseTransform.forward);        
         Quaternion xAxisRotation = Quaternion.AngleAxis(this.GetClampedZAngle(), this._antennaBaseTransform.right);
 

@@ -10,8 +10,7 @@ public class PlayerControlsManager : MonoBehaviour
     
     public Camera playerCamera;
 
-    [SerializeField]
-    private LayerMask _interactableObjectLayer;
+    public LayerMask interactableObjectLayer;
 
 
     private PlayerControls _playerControls;
@@ -76,7 +75,7 @@ public class PlayerControlsManager : MonoBehaviour
         Ray mouseRay = this.playerCamera.ScreenPointToRay(Input.mousePosition);
 
 
-        if (Physics.Raycast(mouseRay, out hitInfo, float.PositiveInfinity, this._interactableObjectLayer, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(mouseRay, out hitInfo, float.PositiveInfinity, this.interactableObjectLayer, QueryTriggerInteraction.Ignore))
         {
             InteractableObject potentialComponent = hitInfo.collider.gameObject.GetComponent<InteractableObject>();           
 

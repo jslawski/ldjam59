@@ -27,8 +27,12 @@ public class SideBanger : InteractableObject
         this.Push();
 
         PlayerControlsManager.instance.targetObject = null;
-    }
 
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
+        AudioClip audioClip = Resources.Load<AudioClip>("Audio/jostle");
+
+        AudioManager.instance.Play(audioClip, audioChannelSettings);
+    }
 
     private void Push()
     {
@@ -38,8 +42,9 @@ public class SideBanger : InteractableObject
 
         Tweener pushAwayTween = this._tvTransform.DOMove(finalPushPosition, 0.1f);
         Tweener returnToPositionTween = this._tvTransform.DOMove(this._initialPosition, 0.1f);
-        Tweener shakeTween = this._tvTransform.DOShakeRotation(0.2f, 30.0f, 10, 60.0f, true, ShakeRandomnessMode.Harmonic);
-        
-        pushSequence.Append(pushAwayTween).Join(shakeTween).Append(returnToPositionTween);
+        Tweener shakeTween = this._tvTransform.DOShakeRotation(0.1f, 30.0f, 10, 60.0f, true, ShakeRandomnessMode.Harmonic);
+        Tweener returnRotation = this._tvTransform.DORotate(Vector3.zero, 0.1f);
+
+        pushSequence.Append(pushAwayTween).Join(shakeTween).Append(returnToPositionTween).Join(returnRotation);
     }
 }
