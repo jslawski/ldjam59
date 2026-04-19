@@ -78,12 +78,19 @@ public class PlayerControlsManager : MonoBehaviour
 
         if (Physics.Raycast(mouseRay, out hitInfo, float.PositiveInfinity, this._interactableObjectLayer, QueryTriggerInteraction.Ignore))
         {
-            Debug.LogError("Target Object Get");
-            this.targetObject = hitInfo.collider.gameObject.GetComponent<InteractableObject>();
+            InteractableObject potentialComponent = hitInfo.collider.gameObject.GetComponent<InteractableObject>();           
+
+            if (potentialComponent != null)
+            {
+                this.targetObject = potentialComponent;
+            }
+            else
+            {
+                this.targetObject = null;
+            }
         }
         else
         {
-            Debug.LogError("Target Object is null");    
             this.targetObject = null;
         }
     }
