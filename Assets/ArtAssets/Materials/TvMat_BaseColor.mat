@@ -60,6 +60,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: f022daf5d53a1aa41a3888fca075e441, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Matcap_Mask:
+        m_Texture: {fileID: 2800000, guid: a2d65ea36aeedba4db895d0e086c4d46, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Matcap_Texture:
         m_Texture: {fileID: 2800000, guid: 214a8aaf69050d4419d0ae618cbc8d13, type: 3}
         m_Scale: {x: 1, y: 1}
