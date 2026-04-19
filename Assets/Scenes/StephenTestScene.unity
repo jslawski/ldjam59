@@ -189,15 +189,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c6fc3a5fe1191c44d9ccfcfea3bd4841, type: 2}
+      objectReference: {fileID: 2100000, guid: f69fb8797ac4c1a46bfa32d86de57440, type: 2}
     - target: {fileID: -3701784854772808153, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c6fc3a5fe1191c44d9ccfcfea3bd4841, type: 2}
+      objectReference: {fileID: 2100000, guid: f69fb8797ac4c1a46bfa32d86de57440, type: 2}
     - target: {fileID: -1176666841674883049, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1176666841674883049, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1176666841674883049, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
@@ -238,7 +243,7 @@ PrefabInstance:
     - target: {fileID: -1176666841674883049, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[1]
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
@@ -561,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0

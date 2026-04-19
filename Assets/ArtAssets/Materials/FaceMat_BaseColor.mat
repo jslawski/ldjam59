@@ -20,7 +20,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _Matcap_Texture
+  m_LockedProperties: _Matcap_Texture _Position
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap_Mask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9fdc789cfba61d648b0d9b9b2d2c7975, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap_Texture:
@@ -98,6 +98,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_2cfc37fa2d7741db9172e45c17163660_Out_0_Texture2D:
         m_Texture: {fileID: 2800000, guid: 1664206c85876544c84f364a94bbc69f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_533bc7699bd24ed4ad6e7d2c30a36709_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 13ea0b9f62983ce4caf2e668d6878df1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_733c2a90cff64c45990aad9d952ed028_Out_0_Texture2D:
@@ -146,6 +150,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _End_GlowLight: 0
     - _EnvironmentReflections: 1
     - _Forehead_Light: 0
     - _FresnelPower: 0
@@ -156,7 +161,7 @@ Material:
     - _Hardness: 1
     - _Left_Cheek_Light: 0
     - _LightStrength: 0
-    - _Matcap_Strength: 0.036
+    - _Matcap_Strength: 0.883
     - _Metallic: 0
     - _Nose_Light: 0
     - _OcclusionStrength: 1
@@ -179,9 +184,11 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _End_Glow_Color: {r: 0, g: 0.60573786, b: 3.732132, a: 1}
     - _Fresnel_Color: {r: 0, g: 0, b: 0, a: 1}
     - _Grunge_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Grunge_Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Interaction_Light_Color: {r: 1, g: 0, b: 0.075800896, a: 1}
     - _LightAngle: {r: 0.25, g: 0.56, b: 0.15, a: 0}
     - _LightColor: {r: 1.2158242, g: 0, b: 0.054253023, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
