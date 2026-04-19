@@ -42,11 +42,24 @@ public class ClosableObject : InteractableObject
             //Update Blendshapes Here
 
 
+            float normalizedValue = this.GetNormalizedValue(yViewportDiff);
+            float tValue = Mathf.Lerp(0.0f, 100.0f, normalizedValue);
+
+            Debug.LogError("Normalized Value: " + normalizedValue + "\nT-Value: " + tValue);
+
             yield return null;
 
             this._currentDragTime += Time.deltaTime;
         }
 
         this._dragCoroutine = null;        
+    }
+
+    private float GetNormalizedValue(float unNormalizedValue)
+    {
+        float oldMin = -this._maxViewportDiff;
+        float oldMax = this._maxViewportDiff;
+
+        return ((unNormalizedValue - oldMin) / (oldMax - oldMin));
     }
 }
