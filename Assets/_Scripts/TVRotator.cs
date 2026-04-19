@@ -14,14 +14,7 @@ public class TVRotator : MonoBehaviour
     private float GetClampedXAngle()
     {
         float deltaX = PlayerControlsManager.instance.lookDelta.x;
-        /*
-        float adjustedYAngle = Mathf.Abs(this._tvTransform.rotation.eulerAngles.y) % 180;
 
-        if (adjustedYAngle > 90.0f)
-        { 
-            deltaX = -deltaX;
-        }
-    */
         float xRotation = this._tvTransform.rotation.eulerAngles.x + deltaX;
 
         if (xRotation > 180.0f)

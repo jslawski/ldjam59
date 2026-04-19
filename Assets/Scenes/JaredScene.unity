@@ -387,6 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657871619}
   - component: {fileID: 657871618}
+  - component: {fileID: 657871620}
   m_Layer: 0
   m_Name: PlayerControlsManager
   m_TagString: Untagged
@@ -406,7 +407,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40651b4d577053c49b4a4bd826ee1429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCamera: {fileID: 330585545}
+  _interactableObjectLayer:
+    serializedVersion: 2
+    m_Bits: 8
   lookDelta: {x: 0, y: 0, z: 0}
+  targetObject: {fileID: 0}
 --- !u!4 &657871619
 Transform:
   m_ObjectHideFlags: 0
@@ -422,6 +428,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657871620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657871617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8bae7953d5a644390593a9da5d4992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +535,7 @@ Transform:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2709505910464385970
+--- !u!1001 &1709300162
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -580,13 +598,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8515272368325511545, guid: c5d6e85e284ac1b43ae546dd2500381d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 796097277620cc344ad1e055b1dd9ce0, type: 2}
-    m_RemovedComponents:
-    - {fileID: 8511198154781572750, guid: c5d6e85e284ac1b43ae546dd2500381d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -597,6 +609,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 2709505910464385970}
   - {fileID: 657871619}
   - {fileID: 1589488020}
+  - {fileID: 1709300162}
