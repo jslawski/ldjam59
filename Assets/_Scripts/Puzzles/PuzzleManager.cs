@@ -55,6 +55,11 @@ public class PuzzleManager : MonoBehaviour
     
         yield return new WaitForSeconds(1.0f);
 
+        while (TVScreenPlayer.instance.IsPrepared() == false)
+        {
+            yield return null;
+        }
+
         if (this._currentPuzzleIndex < this._allPuzzles.Length)
         {
             this._allPuzzles[this._currentPuzzleIndex].Setup();

@@ -20,7 +20,7 @@ public class PuzzleSplash : LevelPuzzle
     {
         base.Setup();
 
-        PlayerControlsManager.instance.playerCamera.transform.localPosition = this._targetPosition;
+        PlayerControlsManager.instance.playerCamera.transform.localPosition = this._startPosition;
 
         TVSignalTuner.instance.SetupCleanScreen();
 
