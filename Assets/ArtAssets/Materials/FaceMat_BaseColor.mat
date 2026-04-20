@@ -150,7 +150,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _End_GlowLight: 0
+    - _End_GlowLight: 1
     - _EnvironmentReflections: 1
     - _Forehead_Light: 0
     - _FresnelPower: 0

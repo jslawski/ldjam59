@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,12 @@ public class PuzzleManager : MonoBehaviour
 
     [SerializeField]
     private int _currentPuzzleIndex = 0;
+
+    [SerializeField]
+    private Transform _tvTransform;
+
+    [SerializeField]
+    private CameraRotator _cameraRotator;
 
     private void Awake()
     {
@@ -55,6 +62,23 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             Debug.LogError("GAME COMPLETE!");
+            StartCoroutine(this.PlayEndSequence());
         }
+    }
+
+    private IEnumerator PlayEndSequence()
+    {
+        this._cameraRotator.LockRotation();
+
+        FaceController.instance.DeactivateAllLights();
+        FaceController.instance.LightFaceObject("_End_GlowLight");
+
+        yield return new WaitForSeconds(2.0f);
+
+        this._tvTransform.DOShakeRotation(3.0f, 20.0f, 10, 60.0f, false, ShakeRandomnessMode.Full);
+
+        yield return new WaitForSeconds(2.5f);
+
+        EndGame.instance.ExecuteEndGame();
     }
 }

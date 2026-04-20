@@ -8,7 +8,7 @@ public class CameraRotator : MonoBehaviour
     [SerializeField]
     private Transform _cameraHolderTransform;
 
-    private Quaternion _targetRotation = Quaternion.identity;    
+    private Quaternion _targetRotation = Quaternion.identity;
     private float _maxVerticalAngle = 30.0f;
 
     private float _constrainedAngleDiff = 15.0f;
@@ -63,10 +63,10 @@ public class CameraRotator : MonoBehaviour
             if (newYAngle < (180.0 - this._constrainedAngleDiff) || newYAngle > (180 + this._constrainedAngleDiff))
             {
                 rotateDiff = 0.0f;
-            }            
+            }
         }
 
-        Quaternion yRotation = Quaternion.AngleAxis(rotateDiff, Vector3.up);        
+        Quaternion yRotation = Quaternion.AngleAxis(rotateDiff, Vector3.up);
         Quaternion xRotation = Quaternion.Euler(this.GetClampedXAngle(), this._cameraHolderTransform.rotation.eulerAngles.y, 0.0f);
 
         this._targetRotation = yRotation * xRotation;
@@ -75,7 +75,7 @@ public class CameraRotator : MonoBehaviour
     }
 
     public float GetYRotationDiff()
-    { 
+    {
         return (this._previousYRotation - this._cameraHolderTransform.rotation.eulerAngles.y);
     }
 
@@ -110,5 +110,10 @@ public class CameraRotator : MonoBehaviour
         this._cameraHolderTransform.DORotate(new Vector3(0.0f, 180.0f, 0.0f), duration);
         yield return new WaitForSeconds(duration);
         this._rotateLocked = false;
+    }
+
+    public void ZoomToPosition(Vector3 targetPosition)
+    {
+        PlayerControlsManager.instance.playerCamera.transform.DOLocalMove(targetPosition, 6.0f);
     }
 }

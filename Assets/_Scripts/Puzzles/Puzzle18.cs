@@ -49,6 +49,11 @@ public class Puzzle18 : LevelPuzzle
     {
         if (FaceController.instance.AreEyesClosed() == true && FaceController.instance.IsMouthClosed() == true)
         {
+            if (this._currentPoints >= this._maxPoints)
+            {
+                return;
+            }
+        
             if (interactedObject == this._targetObjects[this._currentPoints])
             {
                 if (this._currentPoints == 0)
@@ -65,12 +70,9 @@ public class Puzzle18 : LevelPuzzle
                 }
                 else if (this._currentPoints < this._maxPoints)
                 {
-                    this._currentPoints++;
-                }
-                else if (this._currentPoints >= this._maxPoints)
-                {
                     interactedObject.ActivateLight();
-                }
+                    this._currentPoints++;
+                }                
             }
             else
             {

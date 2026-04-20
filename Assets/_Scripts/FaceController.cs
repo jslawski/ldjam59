@@ -124,4 +124,14 @@ public class FaceController : MonoBehaviour
                 this._faceMaterial.SetFloat(facePropertyName, currentValue);
             });
     }
+
+    public void DeactivateAllLights()
+    {
+        this.UnlightFaceObject("_Forehead_Light");
+        this.UnlightFaceObject("_Nose_Light");
+        this.UnlightFaceObject("_Chin_Light");
+        this.UnlightFaceObject("_Left_Cheek_Light");
+        this.UnlightFaceObject("_Right_Cheek_Light");
+        this.UnlightFaceObject("_End_GlowLight");
+    }
 }

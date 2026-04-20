@@ -21,6 +21,8 @@ public class LevelPuzzle : MonoBehaviour
             this._interactableObjects[i].DeactivateLight();
         }
 
+        FaceController.instance.DeactivateAllLights();
+
         FaceController.instance.OpenEyes();
         FaceController.instance.OpenMouth();
     }
