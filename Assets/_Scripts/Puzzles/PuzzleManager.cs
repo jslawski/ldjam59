@@ -27,6 +27,8 @@ public class PuzzleManager : MonoBehaviour
         }
 
         this._allPuzzles = GetComponentsInChildren<LevelPuzzle>();
+
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void Start()
