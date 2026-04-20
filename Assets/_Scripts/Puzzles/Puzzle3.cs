@@ -23,16 +23,17 @@ public class Puzzle3 : LevelPuzzle
     public override void UpdatePuzzleState(InteractableObject interactedObject, float value)
     {
         if (interactedObject == this._targetObject && value <= 0.5f)
-        {
+        {            
             this._currentPoints++;
         }
         else
         {
-            this._currentPoints = 0;
+            this.ResetPuzzle();
         }
 
         if (this._currentPoints >= this._maxPoints)
         {
+            interactedObject.ActivateLight();
             this.CompletePuzzle();
         }
     }

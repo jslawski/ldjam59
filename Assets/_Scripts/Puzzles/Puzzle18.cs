@@ -55,6 +55,7 @@ public class Puzzle18 : LevelPuzzle
                 {
                     if (value > 5.0f)
                     {
+                        interactedObject.ActivateLight();
                         this._currentPoints++;
                     }
                     else
@@ -66,8 +67,10 @@ public class Puzzle18 : LevelPuzzle
                 {
                     this._currentPoints++;
                 }
-
-                Debug.LogError("Completed Step " + this._currentPoints);
+                else if (this._currentPoints >= this._maxPoints)
+                {
+                    interactedObject.ActivateLight();
+                }
             }
             else
             {

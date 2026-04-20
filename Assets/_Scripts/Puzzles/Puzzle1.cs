@@ -18,7 +18,12 @@ public class Puzzle1 : LevelPuzzle
     {
         if (value >= 3.0f)
         {
+            interactedObject.ActivateLight();
             this.CompletePuzzle();
+        }
+        else
+        {
+            this.ResetPuzzle();
         }
     }
 }

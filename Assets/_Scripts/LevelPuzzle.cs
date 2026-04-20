@@ -18,6 +18,7 @@ public class LevelPuzzle : MonoBehaviour
         for (int i = 0; i < this._interactableObjects.Length; i++)
         {
             this._interactableObjects[i].onInteracted += this.UpdatePuzzleState;
+            this._interactableObjects[i].DeactivateLight();
         }
 
         FaceController.instance.OpenEyes();
@@ -45,6 +46,10 @@ public class LevelPuzzle : MonoBehaviour
     {
         Debug.LogError("RESET!");
         this._currentPoints = 0;
-        //Turn off all indicators here
+
+        for (int i = 0; i < this._interactableObjects.Length; i++)
+        {
+            this._interactableObjects[i].DeactivateLight();
+        }        
     }
 }

@@ -29,7 +29,6 @@ public class Puzzle9 : LevelPuzzle
 
     public override void UpdatePuzzleState(InteractableObject interactedObject, float value)
     {
-        Debug.LogError("DOINK!");
         if (interactedObject == this._targetObject && this.IsWithinTimeWindow())
         {
             this.CompletePuzzle();
@@ -43,8 +42,6 @@ public class Puzzle9 : LevelPuzzle
 
         bool withinWindow1 = (currentVideoTime >= this._minTime1 && currentVideoTime <= this._maxTime1);
         bool withinWindow2 = (currentVideoTime >= this._minTime2 && currentVideoTime <= this._maxTime2);
-
-        Debug.LogError("Video Time: " + currentVideoTime);
 
         return (withinWindow1 || withinWindow2);
     }

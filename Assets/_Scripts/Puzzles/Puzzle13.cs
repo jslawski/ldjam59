@@ -50,11 +50,12 @@ public class Puzzle13 : LevelPuzzle
     {
         if (interactedObject == this._targetObjects[this._currentPoints])
         {
+            interactedObject.ActivateLight();
             this._currentPoints++;            
         }
         else
         {
-            this._currentPoints = 0;
+            this.ResetPuzzle();
         }
 
         if (this._currentPoints >= this._maxPoints)

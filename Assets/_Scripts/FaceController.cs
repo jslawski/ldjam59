@@ -11,6 +11,8 @@ public class FaceController : MonoBehaviour
     private SkinnedMeshRenderer _faceMesh;
     [SerializeField]
     private Material _screenMaterial;
+    [SerializeField]
+    private Material _faceMaterial;
 
     public float masterVolume = 1.0f;
 
@@ -103,5 +105,23 @@ public class FaceController : MonoBehaviour
     public bool IsMouthClosed()
     {
         return (this._faceMesh.GetBlendShapeWeight(1) >= 100.0f);
+    }
+
+    public void LightFaceObject(string facePropertyName)
+    {
+        float currentValue = this._faceMaterial.GetFloat(facePropertyName);
+        DOTween.To(() => currentValue, x => currentValue = x, 1.0f, 0.2f)
+            .OnUpdate(() => {
+                this._faceMaterial.SetFloat(facePropertyName, currentValue);
+            });
+    }
+
+    public void UnlightFaceObject(string facePropertyName)
+    {
+        float currentValue = this._faceMaterial.GetFloat(facePropertyName);
+        DOTween.To(() => currentValue, x => currentValue = x, 0.0f, 0.2f)
+            .OnUpdate(() => {
+                this._faceMaterial.SetFloat(facePropertyName, currentValue);
+            });
     }
 }

@@ -33,6 +33,7 @@ public class Puzzle16 : LevelPuzzle
     {
         if (FaceController.instance.AreEyesClosed() && FaceController.instance.IsMouthClosed())
         {
+            interactedObject.ActivateLight();
             this.CompletePuzzle();
         }
     }

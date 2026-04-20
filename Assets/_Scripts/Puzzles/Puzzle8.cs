@@ -28,22 +28,24 @@ public class Puzzle8 : LevelPuzzle
         {
             if ((interactedObject == this._targetObjects[0]) && (value >= 2.5f))
             {
+                interactedObject.ActivateLight();
                 this._currentPoints++;
             }
             else
             {
-                this._currentPoints = 0;
+                this.ResetPuzzle();
             }
         }
         else if (this._currentPoints == 1)
         {
             if ((interactedObject == this._targetObjects[1]) && (value >= 4.5f))
             {
+                interactedObject.ActivateLight();
                 this._currentPoints++;
             }
             else
             {
-                this._currentPoints = 0;
+                this.ResetPuzzle();
             }
         }
 
