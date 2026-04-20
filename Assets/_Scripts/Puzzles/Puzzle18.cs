@@ -1,0 +1,82 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+//Factory Reset
+public class Puzzle18 : LevelPuzzle
+{
+    [SerializeField]
+    private InteractableObject[] _targetObjects;
+
+    public override void Setup()
+    {
+        base.Setup();
+
+        TVSignalTuner.instance.SetupCleanScreen();
+
+        TVScreenPlayer.instance.PlayVideo(this._videoFileName);
+
+        this._maxPoints = 7;
+        this._currentPoints = 0;
+
+        StartCoroutine(this.ProcessPuzzle());
+    }
+
+    private IEnumerator ProcessPuzzle()
+    {
+        while (true)
+        {
+            if (FaceController.instance.AreEyesClosed() == false && FaceController.instance.IsMouthClosed() == false)
+            {
+                if (this._currentPoints >= this._maxPoints)
+                {
+                    this.CompletePuzzle();
+                }
+            }
+
+            yield return null;
+        }
+    }
+
+    public override void CompletePuzzle()
+    {
+        //Do ending cinematic stuff either here or in puzzle manager
+        StopAllCoroutines();
+        base.CompletePuzzle();
+    }
+
+    public override void UpdatePuzzleState(InteractableObject interactedObject, float value)
+    {
+        if (FaceController.instance.AreEyesClosed() == true && FaceController.instance.IsMouthClosed() == true)
+        {
+            if (interactedObject == this._targetObjects[this._currentPoints])
+            {
+                if (this._currentPoints == 0)
+                {
+                    if (value > 5.0f)
+                    {
+                        this._currentPoints++;
+                    }
+                    else
+                    {
+                        this.ResetPuzzle();
+                    }
+                }
+                else if (this._currentPoints < this._maxPoints)
+                {
+                    this._currentPoints++;
+                }
+
+                Debug.LogError("Completed Step " + this._currentPoints);
+            }
+            else
+            {
+                this.ResetPuzzle();
+            }
+        }
+        else if (this._currentPoints < this._maxPoints)
+        {
+            this.ResetPuzzle();
+        }
+    }
+}

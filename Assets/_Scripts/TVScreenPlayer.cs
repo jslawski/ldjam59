@@ -11,6 +11,9 @@ public class TVScreenPlayer : MonoBehaviour
 
     private AudioSource[] _audioSources;
 
+    [SerializeField]
+    private RenderTexture _screenRenderTexture;
+
     private void Awake()
     {
         if (instance == null)
@@ -28,6 +31,8 @@ public class TVScreenPlayer : MonoBehaviour
     public void PlayVideo(string videoFileName, bool loop = true)
     {
         this._videoPlayer.Stop();
+
+        this._screenRenderTexture.Release();
 
         string filenameWithExtension = videoFileName + ".webm";
 
@@ -49,5 +54,15 @@ public class TVScreenPlayer : MonoBehaviour
     public double GetVideoTime()
     {
         return this._videoPlayer.clockTime;
+    }
+
+    public void PauseVideo()
+    {
+        this._videoPlayer.playbackSpeed = 0.0f;
+    }
+
+    public void SetPlaybackSpeed(float playbackSpeed)
+    {
+        this._videoPlayer.playbackSpeed = playbackSpeed;
     }
 }

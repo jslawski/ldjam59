@@ -819,6 +819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _videoPlayer: {fileID: 7380514787273963033}
+  _screenRenderTexture: {fileID: 8600000, guid: 97d5edc366397324db03d948aad7142c,
+    type: 2}
 --- !u!328 &7380514787273963033
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -838,7 +840,7 @@ VideoPlayer:
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 1
-  m_TimeUpdateMode: 2
+  m_TimeUpdateMode: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
   m_TargetAudioSources:

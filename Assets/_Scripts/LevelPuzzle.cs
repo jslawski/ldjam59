@@ -40,4 +40,11 @@ public class LevelPuzzle : MonoBehaviour
     { 
     
     }
+
+    public virtual void ResetPuzzle()
+    {
+        Debug.LogError("RESET!");
+        this._currentPoints = 0;
+        //Turn off all indicators here
+    }
 }

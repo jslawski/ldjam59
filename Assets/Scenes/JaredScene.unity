@@ -122,6 +122,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &62829335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62829336}
+  - component: {fileID: 62829337}
+  m_Layer: 0
+  m_Name: Puzzle13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &62829336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62829335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &62829337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62829335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb2c17c7b81d574cb93d12d6778534b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 09_Singalong
+  _interactableObjects:
+  - {fileID: 898133521}
+  - {fileID: 898133517}
+  - {fileID: 898133523}
+  - {fileID: 898133516}
+  - {fileID: 898133520}
+  - {fileID: 898133522}
+  - {fileID: 898133518}
+  _cameraRotator: {fileID: 1589488019}
+  _targetObjects:
+  - {fileID: 898133521}
+  - {fileID: 898133517}
+  - {fileID: 898133523}
+  - {fileID: 898133521}
+  - {fileID: 898133517}
+  - {fileID: 898133523}
 --- !u!1 &261413578
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +230,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &263820127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263820128}
+  - component: {fileID: 263820129}
+  m_Layer: 0
+  m_Name: Puzzle18
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &263820128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263820127}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &263820129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263820127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92205f3e1c662e4aa1f93fcd360d8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 10_Factoryreset
+  _interactableObjects:
+  - {fileID: 898133521}
+  - {fileID: 898133517}
+  - {fileID: 898133523}
+  - {fileID: 898133516}
+  - {fileID: 898133520}
+  - {fileID: 898133522}
+  - {fileID: 898133518}
+  _targetObjects:
+  - {fileID: 898133521}
+  - {fileID: 898133523}
+  - {fileID: 898133520}
+  - {fileID: 898133516}
+  - {fileID: 898133517}
+  - {fileID: 898133517}
+  - {fileID: 898133517}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,10 +702,58 @@ MonoBehaviour:
   _interactableObjects:
   - {fileID: 898133519}
   _targetObject: {fileID: 898133519}
-  _minTime1: 6
+  _minTime1: 7
   _maxTime1: 11
   _minTime2: 25
   _maxTime2: 29
+--- !u!1 &584433632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584433633}
+  - component: {fileID: 584433634}
+  m_Layer: 0
+  m_Name: Puzzle16
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &584433633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584433632}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584433634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584433632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1b926f4aa791741852f747d9ea1d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 10_Factoryreset
+  _interactableObjects:
+  - {fileID: 898133521}
+  _cameraRotator: {fileID: 1589488019}
 --- !u!1 &617845800
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +912,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &866482024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866482025}
+  - component: {fileID: 866482026}
+  m_Layer: 0
+  m_Name: Puzzle14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &866482025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866482024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866482026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866482024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d25eaaac8d4b84087bb669afb4d518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 10_Factoryreset
+  _interactableObjects: []
+  _cutsceneTimeInSeconds: 56
 --- !u!1001 &898133512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,11 +967,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3426035931301882714, guid: ce84d270bc3e3de469e3718129973017,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[1]
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5164119450432613542, guid: ce84d270bc3e3de469e3718129973017,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1179,6 +1391,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1250715131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250715132}
+  - component: {fileID: 1250715133}
+  m_Layer: 0
+  m_Name: Puzzle17
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1250715132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250715131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1250715133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250715131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4616552f756a044abf70cf64e98e666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 12_Whatareyoudoing
+  _interactableObjects:
+  - {fileID: 898133525}
+  _reactionVideoFileName: 13_Stop
+  _cameraRotator: {fileID: 1589488019}
 --- !u!1 &1259683533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1834,12 @@ Transform:
   - {fileID: 1259683534}
   - {fileID: 349661971}
   - {fileID: 1464798220}
+  - {fileID: 62829336}
+  - {fileID: 866482025}
+  - {fileID: 1998876989}
+  - {fileID: 584433633}
+  - {fileID: 1250715132}
+  - {fileID: 263820128}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1881646633
@@ -1587,7 +1854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dcb1500eec83a4aba0190986ac21c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentPuzzleIndex: 9
+  _currentPuzzleIndex: 18
 --- !u!1 &1905918695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1902,53 @@ MonoBehaviour:
   _videoFileName: 01_Rayintro
   _interactableObjects: []
   _cutsceneTimeInSeconds: 21
+--- !u!1 &1998876988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998876989}
+  - component: {fileID: 1998876990}
+  m_Layer: 0
+  m_Name: Puzzle15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1998876989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998876988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1998876990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998876988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1792c755b56d9584ca103b1fa5261c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 11_Apologies
+  _interactableObjects: []
+  _cutsceneTimeInSeconds: 11
 --- !u!4 &2007337770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7045250407124898126, guid: ce84d270bc3e3de469e3718129973017,

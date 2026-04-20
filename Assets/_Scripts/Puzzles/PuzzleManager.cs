@@ -33,7 +33,12 @@ public class PuzzleManager : MonoBehaviour
     
         this._currentPuzzleIndex++;
 
+        StartCoroutine(this.TransitionToNextPuzzle());
+    }
 
+    public void JumpToPuzzle(int puzzleIndex)
+    {
+        this._currentPuzzleIndex = puzzleIndex;
         StartCoroutine(this.TransitionToNextPuzzle());
     }
 

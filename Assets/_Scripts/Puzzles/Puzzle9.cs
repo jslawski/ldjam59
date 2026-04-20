@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//HitPeeking1
+//HitPeeking
 public class Puzzle9 : LevelPuzzle
 {
     [SerializeField]
