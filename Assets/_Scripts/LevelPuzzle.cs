@@ -54,4 +54,20 @@ public class LevelPuzzle : MonoBehaviour
             this._interactableObjects[i].DeactivateLight();
         }        
     }
+
+    public virtual void PlayPuzzleProgressSound()
+    {
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
+        AudioClip audioClip = Resources.Load<AudioClip>("Audio/PuzzleInputSound");
+
+        AudioManager.instance.Play(audioClip, audioChannelSettings);
+    }
+
+    public virtual void PlayPuzzleCompleteSound()
+    {
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
+        AudioClip audioClip = Resources.Load<AudioClip>("Audio/PuzzleCompleteSound");
+
+        AudioManager.instance.Play(audioClip, audioChannelSettings);
+    }
 }

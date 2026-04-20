@@ -28,7 +28,7 @@ public class SideBanger : InteractableObject
         PlayerControlsManager.instance.targetObject = null;
 
         AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
-        AudioClip audioClip = Resources.Load<AudioClip>("Audio/jostle");
+        AudioClip audioClip = Resources.Load<AudioClip>("Audio/TVSmackingSound");
 
         AudioManager.instance.Play(audioClip, audioChannelSettings);
 

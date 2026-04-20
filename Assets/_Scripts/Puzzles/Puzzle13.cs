@@ -51,6 +51,7 @@ public class Puzzle13 : LevelPuzzle
         if (interactedObject == this._targetObjects[this._currentPoints])
         {
             interactedObject.ActivateLight();
+            this.PlayPuzzleProgressSound();
             this._currentPoints++;            
         }
         else
@@ -62,6 +63,7 @@ public class Puzzle13 : LevelPuzzle
         {
             StopAllCoroutines();
             this.CompletePuzzle();
+            this.PlayPuzzleCompleteSound();
             TVScreenPlayer.instance.SetPlaybackSpeed(1.0f);            
         }
     }

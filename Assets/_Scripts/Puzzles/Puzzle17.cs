@@ -94,6 +94,11 @@ public class Puzzle17 : LevelPuzzle
             this._interactableObjects[i].onInteracted -= this.UpdatePuzzleState;
         }
 
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
+        AudioClip audioClip = Resources.Load<AudioClip>("Audio/AntennaBreakingSound");
+
+        AudioManager.instance.Play(audioClip, audioChannelSettings);
+
         GameObject antennaGameObject = this._interactableObjects[0].gameObject;
         this._interactableObjects[0].enabled = false;
 

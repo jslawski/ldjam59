@@ -20,6 +20,7 @@ public class Puzzle1 : LevelPuzzle
         {
             interactedObject.ActivateLight();
             this.CompletePuzzle();
+            this.PlayPuzzleCompleteSound();
         }
         else
         {

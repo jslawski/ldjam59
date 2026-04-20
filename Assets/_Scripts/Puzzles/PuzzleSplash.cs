@@ -20,6 +20,9 @@ public class PuzzleSplash : LevelPuzzle
     {
         base.Setup();
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         PlayerControlsManager.instance.playerCamera.transform.localPosition = this._startPosition;
 
         TVSignalTuner.instance.SetupCleanScreen();

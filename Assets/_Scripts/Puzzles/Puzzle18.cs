@@ -42,6 +42,7 @@ public class Puzzle18 : LevelPuzzle
     {
         StopAllCoroutines();
         base.CompletePuzzle();
+        this.PlayPuzzleCompleteSound();
     }
 
     public override void UpdatePuzzleState(InteractableObject interactedObject, float value)
@@ -60,6 +61,7 @@ public class Puzzle18 : LevelPuzzle
                     if (value > 5.0f)
                     {
                         interactedObject.ActivateLight();
+                        this.PlayPuzzleProgressSound();
                         this._currentPoints++;
                     }
                     else
@@ -71,6 +73,7 @@ public class Puzzle18 : LevelPuzzle
                 {
                     interactedObject.ActivateLight();
                     this._currentPoints++;
+                    this.PlayPuzzleProgressSound();
                 }                
             }
             else

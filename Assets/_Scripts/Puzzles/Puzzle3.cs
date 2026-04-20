@@ -25,6 +25,7 @@ public class Puzzle3 : LevelPuzzle
         if (interactedObject == this._targetObject && value <= 0.5f)
         {            
             this._currentPoints++;
+            this.PlayPuzzleProgressSound();
         }
         else
         {
@@ -35,6 +36,7 @@ public class Puzzle3 : LevelPuzzle
         {
             interactedObject.ActivateLight();
             this.CompletePuzzle();
+            this.PlayPuzzleCompleteSound();
         }
     }
 }

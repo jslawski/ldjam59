@@ -9,6 +9,8 @@ public class AntennaRotator : InteractableObject
 
     private float _maxAngle = 30.0f;
 
+    private Vector2 _previousDiff = Vector2.zero;
+
     private float GetClampedZAngle()
     {
         float deltaX = PlayerControlsManager.instance.lookDelta.x;
@@ -46,6 +48,14 @@ public class AntennaRotator : InteractableObject
         //Quaternion zAxisRotation = Quaternion.Euler(0.0f, 0.0f, this.GetClampedXAngle());
         //Quaternion xAxisRotation = Quaternion.Euler(this.GetClampedZAngle(), 0.0f, 0.0f);
 
+        if (this._previousDiff.magnitude != 0)
+        {
+            if (this.ShouldPlaySqueak() == true)
+            {
+                this.PlaySqueakSound();
+            }
+        }
+
         Quaternion zAxisRotation = Quaternion.AngleAxis(this.GetClampedXAngle(), this._antennaBaseTransform.forward);        
         Quaternion xAxisRotation = Quaternion.AngleAxis(this.GetClampedZAngle(), this._antennaBaseTransform.right);
 
@@ -57,5 +67,29 @@ public class AntennaRotator : InteractableObject
         {
             this.onInteracted(this);
         }
+
+        this._previousDiff = PlayerControlsManager.instance.lookDelta;
+    }
+
+    private void PlaySqueakSound()
+    {
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
+        AudioClip audioClip = Resources.Load<AudioClip>("Audio/AntennaJostleSound");
+
+        AudioManager.instance.Play(audioClip, audioChannelSettings);
+    }
+
+    private bool ShouldPlaySqueak()
+    {
+        Debug.LogError("Delta: " + PlayerControlsManager.instance.lookDelta.magnitude);
+        return (PlayerControlsManager.instance.lookDelta.magnitude > 3.0f);
+    
+        //bool check1 = (this._previousDiff.x > 0 && PlayerControlsManager.instance.lookDelta.x < 0);
+        //bool check2 = (this._previousDiff.x < 0 && PlayerControlsManager.instance.lookDelta.x > 0);
+        //bool check3 = (this._previousDiff.y > 0 && PlayerControlsManager.instance.lookDelta.y < 0);
+        //bool check4 = (this._previousDiff.y < 0 && PlayerControlsManager.instance.lookDelta.y > 0);
+
+        //return (check1 || check2 || check3 || check4);
+
     }
 }

@@ -41,6 +41,7 @@ public class Puzzle8 : LevelPuzzle
             if ((interactedObject == this._targetObjects[1]) && (value >= 4.5f))
             {
                 interactedObject.ActivateLight();
+                this.PlayPuzzleProgressSound();
                 this._currentPoints++;
             }
             else
@@ -52,6 +53,7 @@ public class Puzzle8 : LevelPuzzle
         if (this._currentPoints >= this._maxPoints)
         {
             this.CompletePuzzle();
+            this.PlayPuzzleCompleteSound();
         }
     }
 }
