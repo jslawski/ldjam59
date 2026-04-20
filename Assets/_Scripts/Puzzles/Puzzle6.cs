@@ -17,17 +17,18 @@ public class Puzzle6 : LevelPuzzle
         TVSignalTuner.instance.SetupRandomTuning();
 
         TVScreenPlayer.instance.PlayVideo(this._videoFileName);
+
+        StartCoroutine(this.ProcessPuzzle());
     }
 
-    private void Update()
+    private IEnumerator ProcessPuzzle()
     {
-        if (TVSignalTuner.instance.IsSignalClean() == true)
+        while (TVSignalTuner.instance.IsSignalClean() == false)
         {
-            if (this._waitCoroutine == null)
-            {
-                this._waitCoroutine = StartCoroutine(this.TurnOffTVAfterWait());
-            }
+            yield return null;
         }
+
+        StartCoroutine(this.TurnOffTVAfterWait());
     }
 
     private IEnumerator TurnOffTVAfterWait()
@@ -41,8 +42,16 @@ public class Puzzle6 : LevelPuzzle
         }
 
         if (TVSignalTuner.instance.IsSignalClean())
-        { 
-            
+        {
+            FaceController.instance.CloseEyes();
+
+            yield return new WaitForSeconds(0.5f);           
+
+            this.CompletePuzzle();
+        }
+        else
+        {
+            StartCoroutine(this.ProcessPuzzle());
         }
     }
 }

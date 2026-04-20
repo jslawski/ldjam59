@@ -11,12 +11,17 @@ public class LevelPuzzle : MonoBehaviour
     protected int _maxPoints;
     protected int _currentPoints;
 
+    //protected bool _isCurrentPuzzle = false;
+
     public virtual void Setup()
     {
         for (int i = 0; i < this._interactableObjects.Length; i++)
         {
             this._interactableObjects[i].onInteracted += this.UpdatePuzzleState;
         }
+
+        FaceController.instance.OpenEyes();
+        FaceController.instance.OpenMouth();
     }
 
     public virtual void CompletePuzzle()

@@ -55,16 +55,44 @@ public class FaceController : MonoBehaviour
         TVScreenPlayer.instance.UpdateVolume();
     }
 
+    public void OpenEyes()
+    {
+        float currentValue = this._faceMesh.GetBlendShapeWeight(0);
+        DOTween.To(() => currentValue, x => currentValue = x, 0, 0.2f)
+            .OnUpdate(() => {
+                this._faceMesh.SetBlendShapeWeight(0, currentValue);
+            });
+    }
+
+    public void OpenMouth()
+    {
+        float currentValue = this._faceMesh.GetBlendShapeWeight(1);
+        DOTween.To(() => currentValue, x => currentValue = x, 0, 0.2f)
+            .OnUpdate(() => {
+                this._faceMesh.SetBlendShapeWeight(1, currentValue);
+            });
+    }
+
     public void CloseEyes()
     {
+        float currentValue = this._faceMesh.GetBlendShapeWeight(0);
+        DOTween.To(() => currentValue, x => currentValue = x, 100, 0.2f)
+            .OnUpdate(() => {
+                this._faceMesh.SetBlendShapeWeight(0, currentValue);
+            });
 
-
-        this._faceMesh.SetBlendShapeWeight(0, 100.0f);
+        //this._faceMesh.SetBlendShapeWeight(0, 100.0f);
     }
 
     public void CloseMouth()
     {
-        this._faceMesh.SetBlendShapeWeight(1, 100.0f);
+        float currentValue = this._faceMesh.GetBlendShapeWeight(1);
+        DOTween.To(() => currentValue, x => currentValue = x, 100, 0.2f)
+            .OnUpdate(() => {
+                this._faceMesh.SetBlendShapeWeight(0, currentValue);
+            });
+
+        //this._faceMesh.SetBlendShapeWeight(1, 100.0f);
     }
 
     public bool AreEyesClosed()
