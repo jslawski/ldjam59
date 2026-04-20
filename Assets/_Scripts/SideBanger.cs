@@ -13,7 +13,8 @@ public class SideBanger : InteractableObject
     private float _pushMagnitude;
 
     private Vector3 _initialPosition;
-    
+
+    public int index;
 
     private void Awake()
     {
@@ -22,8 +23,6 @@ public class SideBanger : InteractableObject
 
     public override void Interact()
     {
-        Debug.LogError("Player SMACKED " + this.gameObject.name);
-
         this.Push();
 
         PlayerControlsManager.instance.targetObject = null;
@@ -32,6 +31,8 @@ public class SideBanger : InteractableObject
         AudioClip audioClip = Resources.Load<AudioClip>("Audio/jostle");
 
         AudioManager.instance.Play(audioClip, audioChannelSettings);
+
+        TVSignalTuner.instance.UpdateStatic(this.index);
     }
 
     private void Push()
