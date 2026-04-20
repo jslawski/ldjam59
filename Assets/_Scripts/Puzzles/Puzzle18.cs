@@ -40,7 +40,6 @@ public class Puzzle18 : LevelPuzzle
 
     public override void CompletePuzzle()
     {
-        //Do ending cinematic stuff either here or in puzzle manager
         StopAllCoroutines();
         base.CompletePuzzle();
     }

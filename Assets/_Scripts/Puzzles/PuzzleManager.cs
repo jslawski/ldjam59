@@ -27,8 +27,6 @@ public class PuzzleManager : MonoBehaviour
         }
 
         this._allPuzzles = GetComponentsInChildren<LevelPuzzle>();
-
-        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void Start()
@@ -69,7 +67,7 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             Debug.LogError("GAME COMPLETE!");
-            StartCoroutine(this.PlayEndSequence());
+            //StartCoroutine(this.PlayEndSequence());
         }
     }
 
