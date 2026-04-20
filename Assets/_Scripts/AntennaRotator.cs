@@ -12,7 +12,7 @@ public class AntennaRotator : InteractableObject
 
     private float GetClampedZAngle()
     {
-        float deltaX = -PlayerControlsManager.instance.lookDelta.x;
+        float deltaX = PlayerControlsManager.instance.lookDelta.x;
 
         float xRotation = this._antennaBaseTransform.rotation.eulerAngles.x + deltaX;
 
@@ -28,7 +28,7 @@ public class AntennaRotator : InteractableObject
 
     private float GetClampedXAngle()
     {
-        float deltaZ = -PlayerControlsManager.instance.lookDelta.y;
+        float deltaZ = PlayerControlsManager.instance.lookDelta.y;
 
         float zRotation = this._antennaBaseTransform.rotation.eulerAngles.z + deltaZ;
 
