@@ -25,15 +25,18 @@ public class TVScreenPlayer : MonoBehaviour
     {
     }
 
-    public void PlayVideo(string videoFileName)
+    public void PlayVideo(string videoFileName, bool loop = true)
     {
         this._videoPlayer.Stop();
 
-        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
+        string filenameWithExtension = videoFileName + ".webm";
+
+        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, filenameWithExtension);
         this._videoPlayer.url = filePath;
 
         this._videoPlayer.renderMode = VideoRenderMode.RenderTexture;
         this._videoPlayer.targetCameraAlpha = 1.0f;
+        this._videoPlayer.isLooping = loop;
         this._videoPlayer.Play();
     }
 
@@ -41,5 +44,10 @@ public class TVScreenPlayer : MonoBehaviour
     {
         this._audioSources[0].volume = (1.0f - TVSignalTuner.instance.currentStaticAmount) * FaceController.instance.masterVolume;
         this._audioSources[1].volume = TVSignalTuner.instance.currentStaticAmount * FaceController.instance.masterVolume;
+    }
+
+    public double GetVideoTime()
+    {
+        return this._videoPlayer.clockTime;
     }
 }

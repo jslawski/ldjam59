@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//CutscenePuzzle
 public class Puzzle5 : LevelPuzzle
 {
     [SerializeField]
@@ -13,7 +14,7 @@ public class Puzzle5 : LevelPuzzle
 
         TVSignalTuner.instance.SetupCleanScreen();
 
-        TVScreenPlayer.instance.PlayVideo(this._videoFileName);
+        TVScreenPlayer.instance.PlayVideo(this._videoFileName, false);
         Invoke("CompletePuzzle", this._cutsceneTimeInSeconds);
     }
 

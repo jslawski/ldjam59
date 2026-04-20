@@ -42,7 +42,9 @@ public class RubbableObject : InteractableObject
 
         while (PlayerControlsManager.instance.IsPressingLeftMouse() == true)
         {
-            if (this.IsInsideBounds() == true)
+            timeDragged += Time.deltaTime;
+            yield return null;
+            /*if (this.IsInsideBounds() == true)
             {
                 yield return null;
                 this.timeDragged += Time.deltaTime;
@@ -51,7 +53,8 @@ public class RubbableObject : InteractableObject
             else
             {
                 yield return null;
-            }        
+            } 
+            */
         }
 
         this._dragCoroutine = null;

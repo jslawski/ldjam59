@@ -14,8 +14,8 @@ CustomRenderTexture:
   m_DownscaleFallback: 0
   m_IsAlphaChannelOptional: 0
   serializedVersion: 5
-  m_Width: 1024
-  m_Height: 768
+  m_Width: 720
+  m_Height: 480
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthStencilFormat: 94
@@ -51,5 +51,5 @@ CustomRenderTexture:
   m_UpdatePeriod: 0
   m_ShaderPass: 0
   m_CubemapFaceMask: 4294967295
-  m_DoubleBuffered: 0
+  m_DoubleBuffered: 1
   m_WrapUpdateZones: 0

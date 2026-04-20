@@ -89,7 +89,7 @@ public class FaceController : MonoBehaviour
         float currentValue = this._faceMesh.GetBlendShapeWeight(1);
         DOTween.To(() => currentValue, x => currentValue = x, 100, 0.2f)
             .OnUpdate(() => {
-                this._faceMesh.SetBlendShapeWeight(0, currentValue);
+                this._faceMesh.SetBlendShapeWeight(1, currentValue);
             });
 
         //this._faceMesh.SetBlendShapeWeight(1, 100.0f);

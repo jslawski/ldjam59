@@ -306,6 +306,114 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &335403989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335403990}
+  - component: {fileID: 335403991}
+  m_Layer: 0
+  m_Name: Puzzle8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335403990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335403989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335403991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335403989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100eb3ff40abb8f429f56b0ff89876f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 07_Fishing
+  _interactableObjects:
+  - {fileID: 898133521}
+  - {fileID: 898133517}
+  - {fileID: 898133523}
+  - {fileID: 898133516}
+  - {fileID: 898133520}
+  - {fileID: 898133522}
+  - {fileID: 898133518}
+  _targetObjects:
+  - {fileID: 898133521}
+  - {fileID: 898133523}
+--- !u!1 &349661970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 349661971}
+  - component: {fileID: 349661972}
+  m_Layer: 0
+  m_Name: Puzzle11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &349661971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349661970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &349661972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349661970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16b81f05c57be34da09fcf27d13114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 08.3_Lotion
+  _interactableObjects:
+  - {fileID: 898133514}
+  _targetObject: {fileID: 898133514}
+  _minTime1: 1
+  _maxTime1: 8
+  _minTime2: 20
+  _maxTime2: 25
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +532,104 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &577359870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577359871}
+  - component: {fileID: 577359872}
+  m_Layer: 0
+  m_Name: Puzzle9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &577359871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577359870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577359872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577359870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16b81f05c57be34da09fcf27d13114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 08.1_Lotion
+  _interactableObjects:
+  - {fileID: 898133519}
+  _targetObject: {fileID: 898133519}
+  _minTime1: 6
+  _maxTime1: 11
+  _minTime2: 25
+  _maxTime2: 29
+--- !u!1 &617845800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617845801}
+  - component: {fileID: 617845802}
+  m_Layer: 0
+  m_Name: Puzzle7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617845801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617845800}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617845802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617845800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a833aef3f87f6ea4da28854953f1c326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 06_Staring
+  _interactableObjects: []
 --- !u!1 &657871617
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +750,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3426035931301882714, guid: ce84d270bc3e3de469e3718129973017,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5164119450432613542, guid: ce84d270bc3e3de469e3718129973017,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -858,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f380bda9ab8b7b488226d39aaffd7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoFileName: TestFootage.webm
+  _videoFileName: 02_Cowboy
   _interactableObjects:
   - {fileID: 898133521}
   - {fileID: 898133517}
@@ -918,7 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158133971a076ad45ba1b86945b95379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoFileName: TestFootage.webm
+  _videoFileName: 05_Dancing
   _interactableObjects: []
 --- !u!1 &1242605889
 GameObject:
@@ -968,6 +1179,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1259683533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259683534}
+  - component: {fileID: 1259683535}
+  m_Layer: 0
+  m_Name: Puzzle10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259683534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259683533}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259683535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259683533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16b81f05c57be34da09fcf27d13114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 08.2_Lotion
+  _interactableObjects:
+  - {fileID: 898133524}
+  _targetObject: {fileID: 898133524}
+  _minTime1: 1
+  _maxTime1: 8
+  _minTime2: 14
+  _maxTime2: 20
 --- !u!1 &1374626900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,9 +1275,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd1503262e176149814f8ae250305b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoFileName: TestFootage.webm
+  _videoFileName: 04_ThankYou
   _interactableObjects: []
   _cutsceneTimeInSeconds: 5
+--- !u!1 &1464798219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464798220}
+  - component: {fileID: 1464798221}
+  m_Layer: 0
+  m_Name: Puzzle12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464798220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464798219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881646632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464798221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464798219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16b81f05c57be34da09fcf27d13114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoFileName: 08.4_Lotion
+  _interactableObjects:
+  - {fileID: 898133515}
+  _targetObject: {fileID: 898133515}
+  _minTime1: 4
+  _maxTime1: 7
+  _minTime2: 12
+  _maxTime2: 15
 --- !u!1 &1497164332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c31abd0c6b742488ca288aff261083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoFileName: 00_Tellybuddy.webm
+  _videoFileName: TestFootage
   _interactableObjects:
   - {fileID: 898133525}
   - {fileID: 898133524}
@@ -1164,7 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613155ef24612a44da2ff7fe18255db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoFileName: TestFootage.webm
+  _videoFileName: 00_Tellybuddy
   _interactableObjects:
   - {fileID: 898133517}
 --- !u!1 &1875430306
@@ -1211,7 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6625817a91f094f4eae39d626d9612dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoFileName: TestFootage.webm
+  _videoFileName: 03_Hair
   _interactableObjects:
   - {fileID: 898133525}
   _targetObject: {fileID: 898133525}
@@ -1252,6 +1567,12 @@ Transform:
   - {fileID: 1875430307}
   - {fileID: 1374626901}
   - {fileID: 1163496577}
+  - {fileID: 617845801}
+  - {fileID: 335403990}
+  - {fileID: 577359871}
+  - {fileID: 1259683534}
+  - {fileID: 349661971}
+  - {fileID: 1464798220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1881646633
@@ -1266,6 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dcb1500eec83a4aba0190986ac21c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentPuzzleIndex: 9
 --- !u!1 &1905918695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,9 +1632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc98d6d75793ea4ebae7c18170e6d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoFileName: TestFootage.webm
+  _videoFileName: 01_Rayintro
   _interactableObjects: []
-  _cutsceneTimeInSeconds: 5
+  _cutsceneTimeInSeconds: 21
 --- !u!4 &2007337770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7045250407124898126, guid: ce84d270bc3e3de469e3718129973017,

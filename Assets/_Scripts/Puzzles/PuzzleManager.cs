@@ -9,6 +9,7 @@ public class PuzzleManager : MonoBehaviour
 
     private LevelPuzzle[] _allPuzzles;
 
+    [SerializeField]
     private int _currentPuzzleIndex = 0;
 
     private void Awake()
@@ -32,6 +33,16 @@ public class PuzzleManager : MonoBehaviour
     
         this._currentPuzzleIndex++;
 
+
+        StartCoroutine(this.TransitionToNextPuzzle());
+    }
+
+    private IEnumerator TransitionToNextPuzzle()
+    {
+        TVSignalTuner.instance.SetFullStatic();
+    
+        yield return new WaitForSeconds(1.0f);
+
         if (this._currentPuzzleIndex < this._allPuzzles.Length)
         {
             this._allPuzzles[this._currentPuzzleIndex].Setup();
@@ -40,6 +51,5 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.LogError("GAME COMPLETE!");
         }
-        
     }
 }

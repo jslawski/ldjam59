@@ -8,7 +8,7 @@ public class Puzzle6 : LevelPuzzle
 {
     private Coroutine _waitCoroutine = null;
 
-    private float _timeToWaitInSeconds = 3.0f;
+    private float _timeToWaitInSeconds = 5.0f;
 
     public override void Setup()
     {

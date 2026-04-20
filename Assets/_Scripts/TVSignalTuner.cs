@@ -36,7 +36,7 @@ public class TVSignalTuner : MonoBehaviour
     }
 
     public void UpdateDistortion()
-    {
+    {            
         float correctRatio = Vector3.Dot(this._antennaTransform.up, this._answerTransform.up) + this._correctAngleBuffer;
         correctRatio = Mathf.Clamp(correctRatio, 0.0f, 1.0f);
 
@@ -46,6 +46,11 @@ public class TVSignalTuner : MonoBehaviour
 
     public void UpdateStatic(int index)
     {
+        if (FaceController.instance.AreEyesClosed() == true)
+        {
+            return;
+        }
+    
         if (this._correctSideIndices.Contains(index) == true)
         {
             this.currentStaticAmount -= this._staticChangePerHit;

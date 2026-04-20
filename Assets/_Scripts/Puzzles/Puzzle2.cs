@@ -14,7 +14,7 @@ public class Puzzle2 : LevelPuzzle
 
         TVSignalTuner.instance.SetupCleanScreen();
 
-        TVScreenPlayer.instance.PlayVideo(this._videoFileName);
+        TVScreenPlayer.instance.PlayVideo(this._videoFileName, false);
         Invoke("CompletePuzzle", this._cutsceneTimeInSeconds);   
     }
 
