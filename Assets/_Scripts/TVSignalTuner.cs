@@ -11,6 +11,11 @@ public class TVSignalTuner : MonoBehaviour
     private Material _screenMaterial;
 
     [SerializeField]
+    private AudioSource _videoAudioSource;
+    [SerializeField]
+    private AudioSource _staticAudioSource;
+
+    [SerializeField]
     private Transform _antennaTransform;
     [SerializeField]
     private Transform _answerTransform;
@@ -24,6 +29,8 @@ public class TVSignalTuner : MonoBehaviour
     private float _currentDistortionAmount = 1.0f;
 
     private float _staticChangePerHit = 0.25f;
+
+
 
     private void Awake()
     {
@@ -45,8 +52,6 @@ public class TVSignalTuner : MonoBehaviour
         float correctRatio = Vector3.Dot(this._antennaTransform.up, this._answerTransform.up) + this._correctAngleBuffer;
         correctRatio = Mathf.Clamp(correctRatio, 0.0f, 1.0f);
 
-        Debug.LogError("CorrectRatio: " + correctRatio);
-
         this._currentDistortionAmount = (1.0f - correctRatio);
         this._screenMaterial.SetFloat("_Distortion_Amount", this._currentDistortionAmount);
     }
@@ -64,20 +69,36 @@ public class TVSignalTuner : MonoBehaviour
 
         this._currentStaticAmount = Mathf.Clamp(this._currentStaticAmount, 0.0f, 1.0f);
 
+        this._videoAudioSource.volume = (1.0f - this._currentStaticAmount);
+        this._staticAudioSource.volume = this._currentStaticAmount;
+
         this._screenMaterial.SetFloat("_Static", this._currentStaticAmount);
     }
 
     public void SetupRandomTuning()
     {
-        this._currentStaticAmount = Random.Range(0.5f, 1.0f);
-        this._screenMaterial.SetFloat("_Static", this._currentStaticAmount);
+        this.SetupStatic();
 
-        this._currentDistortionAmount = Random.Range(0.5f, 1.0f);
-        this._screenMaterial.SetFloat("_Distortion_Amount", this._currentDistortionAmount);
+        this.SetupDistortion();
 
         this.SetupNewCorrectList();
 
         this.SetupCorrectAngle();
+    }
+
+    private void SetupStatic()
+    {
+        this._currentStaticAmount = Random.Range(0.5f, 1.0f);
+        this._screenMaterial.SetFloat("_Static", this._currentStaticAmount);
+
+        this._videoAudioSource.volume = (1.0f - this._currentStaticAmount);
+        this._staticAudioSource.volume = this._currentStaticAmount;
+    }
+
+    private void SetupDistortion()
+    {
+        this._currentDistortionAmount = Random.Range(0.5f, 1.0f);
+        this._screenMaterial.SetFloat("_Distortion_Amount", this._currentDistortionAmount);
     }
 
     private void SetupNewCorrectList()
