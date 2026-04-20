@@ -11,6 +11,12 @@ public class ClosableObject : InteractableObject
     [HideInInspector]
     public float _currentDragTime = 0.0f;
 
+    [SerializeField]
+    private SkinnedMeshRenderer _faceMesh;
+
+    [SerializeField]
+    private int _blendShapeIndex;
+
     public override void Interact()
     {
         if (this._dragCoroutine == null)
@@ -39,7 +45,19 @@ public class ClosableObject : InteractableObject
 
             //Update Blendshapes Here
             float normalizedValue = this.GetNormalizedValue(yViewportDiff);
-            float tValue = Mathf.Lerp(0.0f, 100.0f, normalizedValue);
+            float tValue;
+
+
+            if (this._blendShapeIndex == 0)
+            {
+                tValue = Mathf.Lerp(100.0f, 0.0f, normalizedValue);
+            }
+            else
+            {
+                tValue = Mathf.Lerp(0.0f, 100.0f, normalizedValue);
+            }
+
+            this._faceMesh.SetBlendShapeWeight(this._blendShapeIndex, tValue);
 
             yield return null;
 
