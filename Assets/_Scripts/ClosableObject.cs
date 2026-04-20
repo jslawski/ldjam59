@@ -37,15 +37,9 @@ public class ClosableObject : InteractableObject
             float yViewportDiff = (diffViewportPoint.y - interactViewportSpacePoint.y);
             yViewportDiff = Mathf.Clamp(yViewportDiff, -this._maxViewportDiff, this._maxViewportDiff);
 
-            Debug.LogError("Current Diff: " + yViewportDiff);
-
             //Update Blendshapes Here
-
-
             float normalizedValue = this.GetNormalizedValue(yViewportDiff);
             float tValue = Mathf.Lerp(0.0f, 100.0f, normalizedValue);
-
-            Debug.LogError("Normalized Value: " + normalizedValue + "\nT-Value: " + tValue);
 
             yield return null;
 
