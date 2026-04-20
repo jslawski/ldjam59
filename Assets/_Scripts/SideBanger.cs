@@ -33,6 +33,11 @@ public class SideBanger : InteractableObject
         AudioManager.instance.Play(audioClip, audioChannelSettings);
 
         TVSignalTuner.instance.UpdateStatic(this.index);
+
+        if (this.onInteracted != null)
+        {
+            this.onInteracted(this);
+        }
     }
 
     private void Push()

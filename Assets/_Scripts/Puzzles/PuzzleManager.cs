@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class PuzzleManager : MonoBehaviour
+{
+    public static PuzzleManager instance;
+
+    private LevelPuzzle[] _allPuzzles;
+
+    private int _currentPuzzleIndex = 0;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        this._allPuzzles = GetComponentsInChildren<LevelPuzzle>();
+    }
+
+    private void Start()
+    {
+        this._allPuzzles[this._currentPuzzleIndex].Setup();
+    }
+
+    public void LoadNextPuzzle()
+    {
+        Debug.LogError("PUZZLE " + this._currentPuzzleIndex + " COMPLETED!");
+    
+        this._currentPuzzleIndex++;
+
+        if (this._currentPuzzleIndex < this._allPuzzles.Length)
+        {
+            this._allPuzzles[this._currentPuzzleIndex].Setup();
+        }
+        else
+        {
+            Debug.LogError("GAME COMPLETE!");
+        }
+        
+    }
+}

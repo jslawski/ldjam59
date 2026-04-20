@@ -55,5 +55,10 @@ public class RubbableObject : InteractableObject
         }
 
         this._dragCoroutine = null;
+
+        if (this.onInteracted != null)
+        {
+            this.onInteracted(this, this.timeDragged);
+        }
     }
 }

@@ -9,7 +9,6 @@ public class AntennaRotator : InteractableObject
 
     private float _maxAngle = 30.0f;
 
-
     private float GetClampedZAngle()
     {
         float deltaX = PlayerControlsManager.instance.lookDelta.x;
@@ -53,5 +52,10 @@ public class AntennaRotator : InteractableObject
         this._antennaBaseTransform.rotation = (xAxisRotation * zAxisRotation);
 
         TVSignalTuner.instance.UpdateDistortion();
+
+        if (this.onInteracted != null)
+        {
+            this.onInteracted(this);
+        }
     }
 }

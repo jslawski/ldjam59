@@ -64,7 +64,12 @@ public class ClosableObject : InteractableObject
             this._currentDragTime += Time.deltaTime;
         }
 
-        this._dragCoroutine = null;        
+        this._dragCoroutine = null;
+
+        if (this.onInteracted != null)
+        {
+            this.onInteracted(this, this._currentDragTime);
+        }
     }
 
     private float GetNormalizedValue(float unNormalizedValue)

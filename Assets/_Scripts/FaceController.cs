@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -56,11 +57,23 @@ public class FaceController : MonoBehaviour
 
     public void CloseEyes()
     {
+
+
         this._faceMesh.SetBlendShapeWeight(0, 100.0f);
     }
 
     public void CloseMouth()
     {
         this._faceMesh.SetBlendShapeWeight(1, 100.0f);
+    }
+
+    public bool AreEyesClosed()
+    {
+        return (this._faceMesh.GetBlendShapeWeight(0) >= 100.0f);
+    }
+
+    public bool IsMouthClosed()
+    {
+        return (this._faceMesh.GetBlendShapeWeight(1) >= 100.0f);
     }
 }

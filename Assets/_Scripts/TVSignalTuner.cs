@@ -35,11 +35,6 @@ public class TVSignalTuner : MonoBehaviour
         this._correctSideIndices = new List<int>();
     }
 
-    private void Start()
-    {
-        this.SetupRandomTuning();
-    }
-
     public void UpdateDistortion()
     {
         float correctRatio = Vector3.Dot(this._antennaTransform.up, this._answerTransform.up) + this._correctAngleBuffer;
@@ -67,6 +62,14 @@ public class TVSignalTuner : MonoBehaviour
         this._screenMaterial.SetFloat("_Static", this.currentStaticAmount);
     }
 
+    public void SetupCleanScreen()
+    {
+        this.ClearDistortion();
+        this.ClearStatic();
+        this.SetupNewCorrectList();
+        this.SetupCorrectAngle();
+    }
+
     public void SetupRandomTuning()
     {
         this.SetupStatic();
@@ -90,6 +93,30 @@ public class TVSignalTuner : MonoBehaviour
     {
         this._currentDistortionAmount = Random.Range(0.5f, 1.0f);
         this._screenMaterial.SetFloat("_Distortion_Amount", this._currentDistortionAmount);
+    }
+
+    public void ClearDistortion()
+    {
+        this._currentDistortionAmount = 0.0f;
+        this._answerTransform.rotation = this._antennaTransform.rotation;
+        this._screenMaterial.SetFloat("_Distortion_Amount", this._currentDistortionAmount);
+    }
+
+    public void ClearStatic()
+    {
+        this.currentStaticAmount = 0.0f;
+        this._screenMaterial.SetFloat("_Static", this.currentStaticAmount);
+    }
+
+    public void SetFullStatic()
+    {
+        this.currentStaticAmount = 1.0f;
+        this._screenMaterial.SetFloat("_Static", this.currentStaticAmount);
+    }
+
+    public bool IsSignalClean()
+    {
+        return (this.currentStaticAmount <= 0.0f && this._currentDistortionAmount <= 0.0f);
     }
 
     private void SetupNewCorrectList()

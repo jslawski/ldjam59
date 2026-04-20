@@ -545,42 +545,42 @@ PrefabInstance:
     - target: {fileID: 6590584172430081989, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.031235453
       objectReference: {fileID: 0}
     - target: {fileID: 6590584172430081989, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.00214726
       objectReference: {fileID: 0}
     - target: {fileID: 6590584172430081989, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.99715596
       objectReference: {fileID: 0}
     - target: {fileID: 6590584172430081989, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.068554744
       objectReference: {fileID: 0}
     - target: {fileID: 6753638664721205361, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.09419584
       objectReference: {fileID: 0}
     - target: {fileID: 6753638664721205361, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.0063739726
       objectReference: {fileID: 0}
     - target: {fileID: 6753638664721205361, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.99326193
       objectReference: {fileID: 0}
     - target: {fileID: 6753638664721205361, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.06721129
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -652,6 +652,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8191253456101570367}
+    - targetCorrespondingSourceObject: {fileID: -3277465611515689774, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4123862899631196374}
     - targetCorrespondingSourceObject: {fileID: -4392381893413001498, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       insertIndex: -1
@@ -771,6 +775,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.26, y: 1.18, z: 1}
   m_Center: {x: 0, y: 0, z: 0.3}
+--- !u!114 &4123862899631196374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343198996550209439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1214b921d87f94484976049885c6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContactPoint: {x: 0, y: 0, z: 0}
 --- !u!137 &3426035931301882714 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1176666841674883049, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
@@ -1285,7 +1302,7 @@ PrefabInstance:
     - target: {fileID: 2827529072850732867, guid: 1ff814974c056f04fa9fcd413397975b,
         type: 3}
       propertyPath: m_Name
-      value: LeftCheekSpot
+      value: RightCheekSpot
       objectReference: {fileID: 0}
     - target: {fileID: 3393866571425959706, guid: 1ff814974c056f04fa9fcd413397975b,
         type: 3}
@@ -1374,7 +1391,7 @@ PrefabInstance:
     - target: {fileID: 2827529072850732867, guid: 1ff814974c056f04fa9fcd413397975b,
         type: 3}
       propertyPath: m_Name
-      value: RightCheekSpot
+      value: LeftCheeckSpot
       objectReference: {fileID: 0}
     - target: {fileID: 3393866571425959706, guid: 1ff814974c056f04fa9fcd413397975b,
         type: 3}
