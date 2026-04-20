@@ -65,4 +65,9 @@ public class TVScreenPlayer : MonoBehaviour
     {
         this._videoPlayer.playbackSpeed = playbackSpeed;
     }
+
+    public bool IsPrepared()
+    {
+        return this._videoPlayer.isPrepared;
+    }
 }
