@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -8,12 +9,16 @@ public class TVScreenPlayer : MonoBehaviour
     [SerializeField]
     private VideoPlayer _videoPlayer;
 
+    private AudioSource[] _audioSources;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+
+        this._audioSources = GetComponents<AudioSource>();
     }
 
     private void Start()
@@ -31,5 +36,11 @@ public class TVScreenPlayer : MonoBehaviour
         this._videoPlayer.renderMode = VideoRenderMode.RenderTexture;
         this._videoPlayer.targetCameraAlpha = 1.0f;
         this._videoPlayer.Play();
+    }
+
+    public void UpdateVolume()
+    {
+        this._audioSources[0].volume = (1.0f - TVSignalTuner.instance.currentStaticAmount) * FaceController.instance.masterVolume;
+        this._audioSources[1].volume = TVSignalTuner.instance.currentStaticAmount * FaceController.instance.masterVolume;
     }
 }

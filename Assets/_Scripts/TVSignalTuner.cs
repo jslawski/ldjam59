@@ -11,11 +11,6 @@ public class TVSignalTuner : MonoBehaviour
     private Material _screenMaterial;
 
     [SerializeField]
-    private AudioSource _videoAudioSource;
-    [SerializeField]
-    private AudioSource _staticAudioSource;
-
-    [SerializeField]
     private Transform _antennaTransform;
     [SerializeField]
     private Transform _answerTransform;
@@ -25,12 +20,10 @@ public class TVSignalTuner : MonoBehaviour
 
     private float _correctAngleBuffer = 0.1f;
 
-    private float _currentStaticAmount = 1.0f;
+    public float currentStaticAmount = 1.0f;
     private float _currentDistortionAmount = 1.0f;
 
     private float _staticChangePerHit = 0.25f;
-
-
 
     private void Awake()
     {
@@ -60,19 +53,18 @@ public class TVSignalTuner : MonoBehaviour
     {
         if (this._correctSideIndices.Contains(index) == true)
         {
-            this._currentStaticAmount -= this._staticChangePerHit;
+            this.currentStaticAmount -= this._staticChangePerHit;
         }
         else
         {
-            this._currentStaticAmount += this._staticChangePerHit;
+            this.currentStaticAmount += this._staticChangePerHit;
         }
 
-        this._currentStaticAmount = Mathf.Clamp(this._currentStaticAmount, 0.0f, 1.0f);
+        this.currentStaticAmount = Mathf.Clamp(this.currentStaticAmount, 0.0f, 1.0f);
 
-        this._videoAudioSource.volume = (1.0f - this._currentStaticAmount);
-        this._staticAudioSource.volume = this._currentStaticAmount;
+        TVScreenPlayer.instance.UpdateVolume();
 
-        this._screenMaterial.SetFloat("_Static", this._currentStaticAmount);
+        this._screenMaterial.SetFloat("_Static", this.currentStaticAmount);
     }
 
     public void SetupRandomTuning()
@@ -88,11 +80,10 @@ public class TVSignalTuner : MonoBehaviour
 
     private void SetupStatic()
     {
-        this._currentStaticAmount = Random.Range(0.5f, 1.0f);
-        this._screenMaterial.SetFloat("_Static", this._currentStaticAmount);
+        this.currentStaticAmount = Random.Range(0.5f, 1.0f);
+        this._screenMaterial.SetFloat("_Static", this.currentStaticAmount);
 
-        this._videoAudioSource.volume = (1.0f - this._currentStaticAmount);
-        this._staticAudioSource.volume = this._currentStaticAmount;
+        TVScreenPlayer.instance.UpdateVolume();
     }
 
     private void SetupDistortion()

@@ -584,6 +584,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.06721129
       objectReference: {fileID: 0}
+    - target: {fileID: 3426035931301882714, guid: ce84d270bc3e3de469e3718129973017,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5164119450432613542, guid: ce84d270bc3e3de469e3718129973017,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -654,18 +659,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce84d270bc3e3de469e3718129973017, type: 3}
---- !u!82 &898133519 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 9165637075353024975, guid: ce84d270bc3e3de469e3718129973017,
-    type: 3}
-  m_PrefabInstance: {fileID: 898133512}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &898133520 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7838101195170676903, guid: ce84d270bc3e3de469e3718129973017,
-    type: 3}
-  m_PrefabInstance: {fileID: 898133512}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &949542972
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,10 +739,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _screenMaterial: {fileID: 2100000, guid: ef42699d5caf82f498549cdf799bb3f7, type: 2}
-  _videoAudioSource: {fileID: 898133519}
-  _staticAudioSource: {fileID: 898133520}
   _antennaTransform: {fileID: 2007337770}
   _answerTransform: {fileID: 1159832012}
+  currentStaticAmount: 1
 --- !u!4 &1242605891
 Transform:
   m_ObjectHideFlags: 0

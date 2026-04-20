@@ -636,6 +636,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 877021688342050441}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -6435399192587130656, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8021280471242517741}
     - targetCorrespondingSourceObject: {fileID: 2701073577493827828, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
         type: 3}
       insertIndex: -1
@@ -940,7 +944,8 @@ AudioSource:
   m_GameObject: {fileID: 6975956437983675046}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -9127971582360716017, guid: d001dce2f24661347a7a7ef86401ffae,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: d370983981fecd84f834cdd063880e73, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -1059,6 +1064,27 @@ LookAtConstraint:
   m_Sources:
   - sourceTransform: {fileID: 0}
     weight: 1
+--- !u!1 &7390623305080234925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6435399192587130656, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4620722058153020237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8021280471242517741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390623305080234925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9b460ca862fb244b4873eb885f720d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _faceMesh: {fileID: 3426035931301882714}
+  _screenMaterial: {fileID: 2100000, guid: ef42699d5caf82f498549cdf799bb3f7, type: 2}
+  masterVolume: 1
 --- !u!4 &7628887567193202390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3026237428503680411, guid: 26aaa4b9371121f4ca8bdd4199100b3d,
