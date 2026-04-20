@@ -698,6 +698,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140a8e89df5ac6641b2e4f0d72922049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1159832012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 877021688342050441, guid: ce84d270bc3e3de469e3718129973017,
+    type: 3}
+  m_PrefabInstance: {fileID: 898133512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1242605889
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _screenMaterial: {fileID: 2100000, guid: ef42699d5caf82f498549cdf799bb3f7, type: 2}
   _antennaTransform: {fileID: 2007337770}
+  _answerTransform: {fileID: 1159832012}
 --- !u!4 &1242605891
 Transform:
   m_ObjectHideFlags: 0

@@ -52,5 +52,6 @@ public class AntennaRotator : InteractableObject
 
         this._antennaBaseTransform.rotation = (xAxisRotation * zAxisRotation);
 
+        TVSignalTuner.instance.UpdateDistortion();
     }
 }
