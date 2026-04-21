@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dcb1500eec83a4aba0190986ac21c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentPuzzleIndex: 19
+  _currentPuzzleIndex: 0
   _tvTransform: {fileID: 37685491}
   _cameraRotator: {fileID: 1589488019}
 --- !u!1 &1905918695
