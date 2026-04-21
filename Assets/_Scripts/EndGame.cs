@@ -57,7 +57,7 @@ public class EndGame : MonoBehaviour
     {
         this._cutscenePlayer.Stop();
 
-        string filenameWithExtension = this._cutsceneName + ".webm";
+        string filenameWithExtension = this._cutsceneName + ".mov";
 
         string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, filenameWithExtension);
         this._cutscenePlayer.url = filePath;

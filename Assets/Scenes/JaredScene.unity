@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dcb1500eec83a4aba0190986ac21c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentPuzzleIndex: 0
+  _currentPuzzleIndex: 19
   _tvTransform: {fileID: 37685491}
   _cameraRotator: {fileID: 1589488019}
 --- !u!1 &1905918695
@@ -2576,8 +2576,8 @@ MonoBehaviour:
   _cutscenePanel: {fileID: 524848107}
   _blackScreen: {fileID: 1312937448}
   _cutscenePlayer: {fileID: 524848111}
-  _cutsceneName: 05_Dancing
-  _cutsceneLength: 10
+  _cutsceneName: TellyBuddy_Outro_Draft00
+  _cutsceneLength: 43
 --- !u!4 &2109266911
 Transform:
   m_ObjectHideFlags: 0
