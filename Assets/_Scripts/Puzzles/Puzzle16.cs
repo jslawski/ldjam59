@@ -51,6 +51,6 @@ public class Puzzle16 : LevelPuzzle
 
         PuzzleManager.instance.LoadNextPuzzle();
 
-        this._cameraRotator.ConstrainCamera();
+        this._cameraRotator.ConstrainCamera();        
     }
 }

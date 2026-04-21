@@ -33,7 +33,7 @@ public class PlayerControlsManager : MonoBehaviour
         this._playerControls.PlayerMap.MoveMouse.canceled += this.StopRotateDirection;
 
         this._playerControls.PlayerMap.LeftClick.performed += this.UpdateTargetObject;
-        this._playerControls.PlayerMap.LeftClick.canceled += this.ClearTargetObject;
+        this._playerControls.PlayerMap.LeftClick.canceled += this.ClearTargetObject;        
     }
 
     private void OnEnable()

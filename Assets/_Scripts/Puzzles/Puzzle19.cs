@@ -15,7 +15,7 @@ public class Puzzle19 : LevelPuzzle
     {
         base.Setup();
 
-        TVSignalTuner.instance.SetupCleanScreen();
+        TVSignalTuner.instance.SetupCleanScreen();       
 
         StartCoroutine(this.SetupCoroutine());
     }
@@ -28,6 +28,8 @@ public class Puzzle19 : LevelPuzzle
         TVScreenPlayer.instance.PlayVideo(this._videoFileName);
 
         yield return new WaitForSeconds(2.0f);
+
+        MusicManager.instance.PlaySong("ClimaxMusic");
 
         this._tvTransform.DOShakeRotation(20.0f, 5.0f, 10, 60.0f, false, ShakeRandomnessMode.Full);
 

@@ -12,6 +12,9 @@ public class EndGame : MonoBehaviour
     private GameObject _cutscenePanel;
 
     [SerializeField]
+    private GameObject _blackScreen;
+
+    [SerializeField]
     private VideoPlayer _cutscenePlayer;
 
     [SerializeField]
@@ -31,6 +34,21 @@ public class EndGame : MonoBehaviour
     public void ExecuteEndGame()
     {
         FaceController.instance.CloseEyes();
+        this._blackScreen.SetActive(true);
+        StartCoroutine(this.EndCoroutine());
+
+        MusicManager.instance.StopSong();
+
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 1.0f, 1.0f, 0.3f, "SFX");
+        AudioClip audioClip = Resources.Load<AudioClip>("Audio/LightbulbPop");
+
+        AudioManager.instance.Play(audioClip, audioChannelSettings);
+    }
+
+    private IEnumerator EndCoroutine()
+    {
+        yield return new WaitForSeconds(3.0f);
+
         this._cutscenePanel.SetActive(true);
         this.PlayVideo();
     }

@@ -12,6 +12,8 @@ public class Puzzle1 : LevelPuzzle
         TVSignalTuner.instance.SetupCleanScreen();
 
         TVScreenPlayer.instance.PlayVideo(this._videoFileName);
+
+        MusicManager.instance.PlaySong("GameLoop");
     }
 
     public override void UpdatePuzzleState(InteractableObject interactedObject, float value)

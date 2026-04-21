@@ -15,6 +15,9 @@ public class SideBanger : InteractableObject
     private Vector3 _initialPosition;
 
     public int index;
+    
+    [SerializeField]
+    private GameObject _hitParticlePrefab;
 
     private void Awake()
     {
@@ -23,6 +26,8 @@ public class SideBanger : InteractableObject
 
     public override void Interact()
     {
+        Instantiate(this._hitParticlePrefab, this.interactContactPoint, new Quaternion());    
+
         this.Push();
 
         PlayerControlsManager.instance.targetObject = null;

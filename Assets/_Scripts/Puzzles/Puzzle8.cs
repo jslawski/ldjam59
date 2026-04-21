@@ -29,6 +29,7 @@ public class Puzzle8 : LevelPuzzle
             if ((interactedObject == this._targetObjects[0]) && (value >= 2.5f))
             {
                 interactedObject.ActivateLight();
+                this.PlayPuzzleProgressSound();
                 this._currentPoints++;
             }
             else

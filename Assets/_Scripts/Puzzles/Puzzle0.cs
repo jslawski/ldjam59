@@ -12,10 +12,14 @@ public class Puzzle0 : LevelPuzzle
         TVSignalTuner.instance.SetupCleanScreen();
 
         TVScreenPlayer.instance.PlayVideo(this._videoFileName);
+
+        MusicManager.instance.PlaySong("TitleMusicLoop");
     }
 
     public override void UpdatePuzzleState(InteractableObject interactedObject, float value)
     {
         this.CompletePuzzle();
+
+        MusicManager.instance.StopSong();
     }
 }

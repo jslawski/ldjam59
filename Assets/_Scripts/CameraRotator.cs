@@ -116,4 +116,9 @@ public class CameraRotator : MonoBehaviour
     {
         PlayerControlsManager.instance.playerCamera.transform.DOLocalMove(targetPosition, 6.0f);
     }
+
+    public bool ScreenIsVisible()
+    {
+        return (this._cameraHolderTransform.rotation.eulerAngles.y < 240.0 && this._cameraHolderTransform.rotation.eulerAngles.y > 120.0f);
+    }
 }

@@ -21,7 +21,8 @@ public class Puzzle17 : LevelPuzzle
 
         TVSignalTuner.instance.SetupCleanScreen();
 
-        TVScreenPlayer.instance.PlayVideo(this._videoFileName);       
+        TVScreenPlayer.instance.PlayVideo(this._videoFileName);
+        MusicManager.instance.PlaySong("TenseGameMusicLoop");
     }
 
     public override void UpdatePuzzleState(InteractableObject interactedObject, float value)
@@ -45,6 +46,8 @@ public class Puzzle17 : LevelPuzzle
 
         this.ChangeVideo(this._reactionVideoFileName);
 
+        MusicManager.instance.PlaySong("StruggleMusicLoop");
+
         while (currentTime < this._timeBeforeBreak && PlayerControlsManager.instance.IsPressingLeftMouse())
         {
             yield return null;
@@ -57,7 +60,8 @@ public class Puzzle17 : LevelPuzzle
         }
         else
         {
-            this.ChangeVideo(this._videoFileName);            
+            this.ChangeVideo(this._videoFileName);
+            MusicManager.instance.PlaySong("TenseGameMusicLoop");
         }
 
         this._antennaCoroutine = null;

@@ -57,7 +57,7 @@ public class LevelPuzzle : MonoBehaviour
 
     public virtual void PlayPuzzleProgressSound()
     {
-        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 1.0f, 1.0f, 0.3f, "SFX");
         AudioClip audioClip = Resources.Load<AudioClip>("Audio/PuzzleInputSound");
 
         AudioManager.instance.Play(audioClip, audioChannelSettings);
@@ -65,7 +65,7 @@ public class LevelPuzzle : MonoBehaviour
 
     public virtual void PlayPuzzleCompleteSound()
     {
-        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 0.8f, 1.2f, 0.3f, "SFX");
+        AudioChannelSettings audioChannelSettings = new AudioChannelSettings(false, 1.0f, 1.0f, 0.3f, "SFX");
         AudioClip audioClip = Resources.Load<AudioClip>("Audio/PuzzleCompleteSound");
 
         AudioManager.instance.Play(audioClip, audioChannelSettings);

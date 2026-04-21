@@ -20,6 +20,8 @@ public class Puzzle18 : LevelPuzzle
         this._currentPoints = 0;
 
         StartCoroutine(this.ProcessPuzzle());
+
+        MusicManager.instance.PlaySong("FinalPuzzleMusicLoop");
     }
 
     private IEnumerator ProcessPuzzle()
@@ -43,6 +45,8 @@ public class Puzzle18 : LevelPuzzle
         StopAllCoroutines();
         base.CompletePuzzle();
         this.PlayPuzzleCompleteSound();
+
+        MusicManager.instance.StopSong();
     }
 
     public override void UpdatePuzzleState(InteractableObject interactedObject, float value)

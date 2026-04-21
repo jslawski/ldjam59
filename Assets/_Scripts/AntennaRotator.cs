@@ -81,7 +81,6 @@ public class AntennaRotator : InteractableObject
 
     private bool ShouldPlaySqueak()
     {
-        Debug.LogError("Delta: " + PlayerControlsManager.instance.lookDelta.magnitude);
         return (PlayerControlsManager.instance.lookDelta.magnitude > 3.0f);
     
         //bool check1 = (this._previousDiff.x > 0 && PlayerControlsManager.instance.lookDelta.x < 0);
